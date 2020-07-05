@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shopping/shopping",
+    "pages/myself/myself",
+    "pages/getGoods/getGoods",
+    "pages/exchangeCode/exchangeCode",
+    "pages/coupons/coupons"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "甜心手机点餐",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "selectedColor": "#ECD798",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/首页.png",
+        "selectedIconPath": "./images/首页(1).png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "点餐",
+        "iconPath": "./images/订阅.png",
+        "selectedIconPath": "./images/订阅(1).png"
+      },
+      {
+        "pagePath": "pages/getGoods/getGoods",
+        "text": "取餐",
+        "iconPath": "./images/点赞.png",
+        "selectedIconPath": "./images/点赞(1).png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我的",
+        "iconPath": "./images/个人中心.png",
+        "selectedIconPath": "./images/个人中心(1).png"
+      }
+    ]
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

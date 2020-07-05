@@ -1,0 +1,39 @@
+<!--pages/myself/myself.wxml-->
+<view>
+  <!-- 用户头像姓名 -->
+  <view class='avatar'>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+    <open-data type="userNickName"></open-data>
+
+  <!-- /用户头像姓名 -->
+
+  <!-- 列表 -->
+  <view>
+    <mp-cell link url="../exchangeCode/exchangeCode" value="会员等级" hover="true">
+        <image slot="icon" src="../../images/兑换.png" class="myCellsImg"></image>
+    </mp-cell>
+    <mp-cell link url="../coupons/coupons" value="福利社" hover="true">
+      <image slot="icon" src="../../images/券.png" class="myCellsImg"></image>
+    </mp-cell>
+    <mp-cell link url="../exchangeCode/exchangeCode" value="会员码"  hover="true">
+        <image slot="icon" src="../../images/兑换.png" class="myCellsImg"></image>
+    </mp-cell>
+    <mp-cell link url="../coupons/coupons" value="积分商城" hover="true">
+      <image slot="icon" src="../../images/券.png" class="myCellsImg"></image>
+    </mp-cell>
+    <mp-cell link url="../exchangeCode/exchangeCode" value="我的订单" hover="true">
+        <image slot="icon" src="../../images/兑换.png" class="myCellsImg"></image>
+    </mp-cell>
+    <mp-cell link url="../coupons/coupons" value="收货地址" hover="true">
+      <image slot="icon" src="../../images/券.png" class="myCellsImg"></image>
+    </mp-cell>
+    <mp-cell link url="../exchangeCode/exchangeCode" value="兑换码" hover="true">
+        <image slot="icon" src="../../images/兑换.png" class="myCellsImg"></image>
+    </mp-cell>
+    <mp-cell link url="../coupons/coupons" value="版本号"  hover="true">
+      <image slot="icon" src="../../images/券.png" class="myCellsImg"></image>
+    </mp-cell>
+  </view>
+  <!-- /列表 -->
+</view>

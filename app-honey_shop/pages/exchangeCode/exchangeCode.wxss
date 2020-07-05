@@ -1,0 +1,7 @@
+/* pages/exchangeCode/exchangeCode.wxss */
+.myCellsImg{
+  margin-right: 16px;
+  vertical-align: middle;
+  width:20px; 
+  height: 20px;
+}

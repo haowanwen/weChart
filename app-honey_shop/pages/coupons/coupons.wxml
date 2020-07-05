@@ -1,0 +1,7 @@
+<!--pages/coupons/coupons.wxml-->
+<view>
+  <image slot="icon" src="../../images/抵用券.png" class="myCellsImgs"></image>
+  <view style="margin-left:35%">
+    <text>暂无可用的优惠券</text>
+  </view>
+</view>

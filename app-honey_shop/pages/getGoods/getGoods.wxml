@@ -1,0 +1,7 @@
+<!--pages/getGoods/getGoods.wxml-->
+<view>
+  <image slot="icon" src="../../images/抵用券.png" class="myCellsImgs"></image>
+  <view style="margin-left:35%">
+    <text>暂时没有待取订单哦</text>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+/* pages/myself/myself.wxss */
+.myCellsImg{
+  margin-right: 16px;
+  vertical-align: middle;
+  width:20px; 
+  height: 20px;
+}
+.avatar{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 2px;
+  clip-path: circle(50rpx at center);
+  display: inline-block;
+}
