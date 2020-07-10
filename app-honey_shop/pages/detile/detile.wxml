@@ -1,0 +1,5 @@
+<!--pages/detile/detile.wxml-->
+<view>
+  <text>detile</text>
+  <text>{{index}}</text>
+</view>

@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "mp-searchbar": "weui-miniprogram/searchbar/searchbar"
+    "mp-searchbar": "weui-miniprogram/searchbar/searchbar",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
   },
   "navigationBarTitleText": "UI组件库"
 }

@@ -3,30 +3,64 @@
   <!-- <view class="page__bd">
     <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
   </view> -->
+
+  <!-- 左侧导航栏和右侧内容区 -->
   <view>
     <scroll-view class='nav_left' scroll-y='true'>
-    <block wx:for="{{cateItems}}" wx:key="index">
-      <view class="nav_left_items {{curNav==item.cate_id?'active':''}}" bindtap="switchRightTab" data-index='{{index}}' data-id="{{item.cate_id}}">{{item.cate_name}}</view>
-    </block>
-  </scroll-view>
-  <scroll-view class="nav_right" scroll-y="true">
-    <!--如果有数据，才遍历项-->
-    <view wx:if="{{cateItems[curIndex].children.length>0}}">
-      <block wx:for="{{cateItems[curIndex].children}}" wx:key="index">
-        <view class="nav_right_items">
-        <!--界面跳转 -->
-          <navigator url="../../detail/detail">
-            <image src="{{item.image}}"></image>
-            <text>{{item.name}}</text>
-          </navigator>
-        </view>
+      <block wx:for="{{cateItems}}" wx:key="index">
+        <view class="nav_left_items {{curNav==item.cate_id?'active':''}}" bindtap="switchRightTab" data-index='{{index}}' data-id="{{item.cate_id}}">{{item.cate_name}}</view>
       </block>
-    </view>
-    <!--如果无数据，则显示数据-->
-    <view class="nocate" wx:else>
-      <!-- <image src="../../images/without.png"></image> -->
-      <text>该分类暂无数据</text>
-    </view>
-  </scroll-view>
+    </scroll-view>
+    <scroll-view class="nav_right" scroll-y="true">
+      <!--如果有数据，才遍历项-->
+      <view wx:if="{{cateItems[curIndex].children.length>0}}">
+        <block wx:for="{{cateItems[curIndex].children}}" wx:key="index">
+          <view class="nav_right_items">
+            <!--界面跳转 --> 
+            <view bindtap="chooseFood" data-index="{{item}}">
+              <image src="{{item.image}}"></image>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      <!--如果无数据，则显示数据-->
+      <view class="nocate" wx:else>
+        <!-- <image src="../../images/without.png"></image> -->
+        <text>该分类暂无数据</text>
+      </view>
+    </scroll-view>
   </view>
+  <!-- /左侧导航栏和右侧内容区 -->
+
+  <!-- 弹出框 -->
+  <mp-dialog class="dialog" title="选择规格" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+    <view>{{detile.name}}</view>
+    <image class="chooseImage" src="{{detile.image}}" mode="aspectFill"></image>
+    <!-- 蛋糕展示的选项 -->
+    <view wx:if="{{curNav}} <3 ? true:fale">
+      <radio-group bindchange="radioChange">
+        <label class="radio">
+          <radio value="six" checked="true"/>六英寸
+        </label>
+        <label class="radio">
+          <radio value="eight" />八英寸
+        </label>
+      </radio-group>
+      <view>
+        <text>价格:</text>
+        <text wx:if="{{isSix}}">￥{{detile.price_six}}</text>
+        <text wx:else>￥{{detile.price_eight}}</text>
+      </view>
+    </view>
+    <!-- /蛋糕展示的选项 -->
+
+    <!-- 非蛋糕展示的选项 -->
+    <view wx:else>
+      <text>费蛋糕</text>
+    </view>
+    <!-- /非蛋糕展示的选项 -->
+    
+  </mp-dialog>
+  <!-- /弹出框 -->
 </view>

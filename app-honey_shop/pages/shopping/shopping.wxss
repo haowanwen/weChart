@@ -80,3 +80,10 @@
   height: 0;
   color: transparent;
 }
+.chooseImage{
+  width: 520rpx;
+  height: 400rpx;
+}
+.dialog{
+  padding: 0;
+}

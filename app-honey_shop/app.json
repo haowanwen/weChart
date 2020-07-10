@@ -5,7 +5,8 @@
     "pages/myself/myself",
     "pages/getGoods/getGoods",
     "pages/exchangeCode/exchangeCode",
-    "pages/coupons/coupons"
+    "pages/coupons/coupons",
+    "pages/detile/detile"
   ],
   "window": {
     "backgroundTextStyle": "light",
